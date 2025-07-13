@@ -1,1 +1,258 @@
-/* CSS moved here from ChatGPT's generated output */
+/* CSS mo* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: #04242e;
+  background-color: #fdfdfd;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  background-color: rgba(59, 163, 248, 0.15);
+  padding: 10px 20px;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(4, 36, 46);
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: rgba(84, 41, 97, 0.8);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 30px 10px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 30px 0 15px;
+}
+
+p {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 800px;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type='email'],
+input[type='text'],
+textarea {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f1dc16;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(170, 133, 2);
+}
+
+.why-us > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 25px;
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-us p {
+  text-align: left;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-left: 4px solid #f1dc16;
+  border-radius: 8px;
+}
+
+.why-us i {
+  color: #3ba3f8;
+  margin-right: 8px;
+}
+
+.watch hr {
+  margin: 20px auto;
+  width: 60%;
+  border: 1px solid #ccc;
+  opacity: 0.4;
+}
+
+.watch-tiktok {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 25px 15px;
+}
+
+.watch-tiktok blockquote {
+  flex: 1 1 350px;
+  max-width: 600px;
+}
+
+.reviews {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.reviews h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.reviews p {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #3ba3f8;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.last {
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.order {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 90%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.order-form textarea {
+  resize: vertical;
+}
+
+.order-form button {
+  background-color: #3ba3f8;
+  color: white;
+  font-weight: bold;
+}
+
+.order-form button:hover {
+  background-color: #227cc7;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .why-us > div {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-tiktok {
+    flex-direction: column;
+  }
+
+  input[type='email'],
+  input[type='text'],
+  textarea {
+    width: 90%;
+  }
+}
+ved here from ChatGPT's generated output */
