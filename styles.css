@@ -1,4 +1,4 @@
-/* CSS mo* {
+  * {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -100,6 +100,7 @@ button:hover {
   background-color: rgb(170, 133, 2);
 }
 
+/* ✅ Keep your 2x2 layout */
 .why-us > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -130,6 +131,7 @@ button:hover {
   opacity: 0.4;
 }
 
+/* ✅ Side-by-side TikTok + Reviews */
 .watch-tiktok {
   display: flex;
   flex-direction: row;
@@ -170,6 +172,7 @@ button:hover {
   font-family: 'Georgia', serif;
 }
 
+/* ✅ Order Section */
 .order {
   padding: 40px 20px;
   text-align: center;
@@ -216,21 +219,7 @@ footer {
   margin-top: 30px;
 }
 
-.whatsapp-btn {
-  display: inline-block;
-  background-color: #25d366;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.whatsapp-btn i {
-  margin-right: 8px;
-}
-
+/* 🔁 Responsive Design */
 @media screen and (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -255,4 +244,7 @@ footer {
     width: 90%;
   }
 }
-ved here from ChatGPT's generated output */
+  textarea {
+    width: 90%;
+  }
+}
