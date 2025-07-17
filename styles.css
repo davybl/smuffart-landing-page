@@ -1,4 +1,4 @@
-  * {
+* {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -25,8 +25,10 @@ header {
 }
 
 .logo {
-  width: 180px;
+  width: 20vh;
   height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul {
@@ -103,8 +105,8 @@ button:hover {
 /* ✅ Keep your 2x2 layout */
 .why-us > div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr);
+  
   gap: 25px;
   padding: 30px 20px;
   max-width: 1000px;
@@ -231,7 +233,7 @@ footer {
   }
 
   .why-us > div {
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr 1fr;
   }
 
   .watch-tiktok {
@@ -243,6 +245,39 @@ footer {
   textarea {
     width: 90%;
   }
+
+  textarea {
+    width: 90%;
+  }
+}
+
+.sample-card{
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  text-align: center;
+}
+
+.sample-gallery{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  overflow: auto;
+  justify-items: center;
+  margin: 25px;
+}
+
+img{
+  width: 30vw;
+  height: 60vh;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+img:hover{
+  transform: scale(1.1);
+  border-radius: 8px;
+}
 }
   textarea {
     width: 90%;
