@@ -1,3 +1,4 @@
+/* Global Reset & Base */
 * {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   background-color: #fdfdfd;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -31,6 +33,7 @@ header {
   padding: 0;
 }
 
+/* Navbar */
 .navbar ul {
   display: flex;
   gap: 20px;
@@ -51,6 +54,7 @@ header {
   color: rgba(84, 41, 97, 0.8);
 }
 
+/* Titles */
 .page-title {
   text-align: center;
   font-size: 2.2rem;
@@ -63,6 +67,7 @@ header {
   margin: 30px 0 15px;
 }
 
+/* Paragraphs */
 p {
   text-align: center;
   margin: 10px auto;
@@ -71,6 +76,7 @@ p {
   font-size: 1rem;
 }
 
+/* Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -96,17 +102,17 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: rgb(170, 133, 2);
 }
 
-/* ✅ Keep your 2x2 layout */
+/* Why Us Section */
 .why-us > div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
   gap: 25px;
   padding: 30px 20px;
   max-width: 1000px;
@@ -126,6 +132,7 @@ button:hover {
   margin-right: 8px;
 }
 
+/* Watch Section */
 .watch hr {
   margin: 20px auto;
   width: 60%;
@@ -133,7 +140,6 @@ button:hover {
   opacity: 0.4;
 }
 
-/* ✅ Side-by-side TikTok + Reviews */
 .watch-tiktok {
   display: flex;
   flex-direction: row;
@@ -174,7 +180,7 @@ button:hover {
   font-family: 'Georgia', serif;
 }
 
-/* ✅ Order Section */
+/* Order Section */
 .order {
   padding: 40px 20px;
   text-align: center;
@@ -212,6 +218,7 @@ button:hover {
   background-color: #227cc7;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -221,7 +228,53 @@ footer {
   margin-top: 30px;
 }
 
-/* 🔁 Responsive Design */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #25d366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.whatsapp-btn i {
+  margin-right: 5px;
+}
+
+/* Samples */
+.sample-card {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.sample-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.sample-gallery img {
+  width: 30vw;
+  max-width: 400px;
+  height: 50vh;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+}
+
+.sample-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -233,7 +286,7 @@ footer {
   }
 
   .why-us > div {
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .watch-tiktok {
@@ -245,41 +298,5 @@ footer {
   textarea {
     width: 90%;
   }
-
-  textarea {
-    width: 90%;
-  }
 }
 
-.sample-card{
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  text-align: center;
-}
-
-.sample-gallery{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-  overflow: auto;
-  justify-items: center;
-  margin: 25px;
-}
-
-img{
-  width: 30vw;
-  height: 60vh;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-img:hover{
-  transform: scale(1.1);
-  border-radius: 8px;
-}
-}
-  textarea {
-    width: 90%;
-  }
-}
