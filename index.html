@@ -1,29 +1,35 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <meta name="description" content="SmuffArt turns your vision into stunning custom digital art. Personalized portraits, fast delivery, and high-quality output." />
+    <meta property="og:title" content="SmuffArt - Custom Digital Art" />
+    <meta property="og:description" content="Turn your vision into captivating digital art with SmuffArt." />
+    <meta property="og:image" content="https://i.postimg.cc/mghLQkxk/IMG-20250704-162850.png" />
+    <meta property="og:url" content="https://smuffart.com" />
+    <meta name="theme-color" content="#f1dc16" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>SmuffArt Landing Page</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>SmuffArt - Custom Digital Art</title>
   </head>
   <body>
     <header>
       <img
         src="https://i.postimg.cc/mghLQkxk/IMG-20250704-162850.png"
         class="logo"
-        alt="SmuffArt Logo"
+        alt="SmuffArt brand logo"
       />
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="#welcome">Welcome</a></li>
           <li><a href="#why_us">Why SmuffArt</a></li>
           <li><a href="#watch">Watch a Sample</a></li>
-          <li><a href="#samples">Sample & Updates</a></li>
-          <li><a href="#order">Order Art</a></li>
+          <li><a href="#samples">Samples</a></li>
+          <li><a href="#order">Order</a></li>
         </ul>
       </nav>
     </header>
@@ -40,10 +46,12 @@
           imagination to life with precision, color, and feeling.
         </p>
         <form action="https://formsubmit.co/smuff371@gmail.com" method="POST">
-          <input name="email" type="email" placeholder="Enter Your Email Address" required />
+          <label for="subscribe-email" style="display: none;">Email:</label>
+          <input id="subscribe-email" name="email" type="email" placeholder="Enter Your Email Address" required />
           <input type="text" name="_honey" style="display:none" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="hidden" name="_subject" value="New Newsletter Subscriber" />
           <button type="submit">Get Started</button>
         </form>
       </section>
@@ -103,24 +111,24 @@
         </div>
       </section>
 
-      <section id='samples' class='sample-card'>
+      <section id="samples" class="sample-card">
         <h2 class="sub-title">Picture Samples</h2>
-        <p>Here are some of the custom portraits I've made</p>
-        <div class='sample-gallery'>
-          <div class='sample one'>
-            <img src='https://i.postimg.cc/ZnvhfDyT/IMG-20250717-WA0045.jpg' alt='Marcus Rashford Photo' />
+        <p>Here are some custom portraits we've crafted for happy clients.</p>
+        <div class="sample-gallery">
+          <div class="sample one">
+            <img src="https://i.postimg.cc/ZnvhfDyT/IMG-20250717-WA0045.jpg" alt="Marcus Rashford reference photo" />
           </div>
-          <div class='sample two'>
-            <img src='https://i.postimg.cc/1R8nhmGz/IMG-20250717-WA0044.jpg' alt='Marcus Rashford Portrait' />
+          <div class="sample two">
+            <img src="https://i.postimg.cc/1R8nhmGz/IMG-20250717-WA0044.jpg" alt="Marcus Rashford digital art" />
           </div>
-          <div class='sample three'>
-            <img src='https://i.postimg.cc/9Xs4c6bY/IMG-20250603-WA0022-1.jpg' alt="A Lady's Photo" />
+          <div class="sample three">
+            <img src="https://i.postimg.cc/9Xs4c6bY/IMG-20250603-WA0022-1.jpg" alt="Photo of a smiling lady" />
           </div>
-          <div class='sample four'>
-            <img src='https://i.postimg.cc/WtRcx6M0/IMG-20250717-WA0046.jpg' alt="The Lady's Portrait" />
+          <div class="sample four">
+            <img src="https://i.postimg.cc/WtRcx6M0/IMG-20250717-WA0046.jpg" alt="Portrait of the smiling lady" />
           </div>
-          <div class='sample five'>
-            <img src='https://i.postimg.cc/9FTD0LN5/IMG-20250717-WA0047.jpg' alt="A Friend's Portrait" />
+          <div class="sample five">
+            <img src="https://i.postimg.cc/9FTD0LN5/IMG-20250717-WA0047.jpg" alt="Digital art of a male friend" />
           </div>
         </div>
       </section>
@@ -130,12 +138,16 @@
         <h2 class="sub-title">Order Your Custom Art</h2>
         <p>Ready to turn your vision into stunning digital art? Fill out the quick request form below and we’ll get back to you with details, pricing, and next steps.</p>
         <form class="order-form" action="https://formsubmit.co/smuff371@gmail.com" method="POST">
-          <input type="text" name="name" placeholder="Your Full Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="description" rows="5" placeholder="Describe your art request..." required></textarea>
+          <label for="order-name" style="display: none;">Name:</label>
+          <input id="order-name" type="text" name="name" placeholder="Your Full Name" required />
+          <label for="order-email" style="display: none;">Email:</label>
+          <input id="order-email" type="email" name="email" placeholder="Your Email" required />
+          <label for="order-description" style="display: none;">Art Description:</label>
+          <textarea id="order-description" name="description" rows="5" placeholder="Describe your art request..." required></textarea>
           <input type="text" name="_honey" style="display:none" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="hidden" name="_subject" value="New Art Request from Landing Page" />
           <button type="submit">Submit Request</button>
         </form>
       </section>
@@ -149,5 +161,4 @@
     </footer>
   </body>
 </html>
-  </body>
-</html>
+
