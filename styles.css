@@ -281,6 +281,10 @@ footer {
     gap: 10px;
   }
 
+  .sample-gallery{
+    gap: 25px;
+  }
+  
   .logo {
     width: 140px;
   }
