@@ -252,7 +252,7 @@ footer {
 .sample-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  gap: 70px;
   justify-items: center;
   padding: 20px;
   width: 100%;
