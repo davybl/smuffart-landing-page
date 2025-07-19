@@ -304,3 +304,8 @@ footer {
   }
 }
 
+@media(min-width: 768px){
+  .sample-gallery{
+    gap: 8%;
+  }
+}
