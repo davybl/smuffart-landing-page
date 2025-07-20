@@ -240,48 +240,77 @@ footer {
   margin-right: 5px;
 }
 
-/* Samples Section - Corrected Styles */
+/* Samples Section - REVISED for 2 Rows, Horizontal Scroll, and Vertical Containment */
 
 /* Basic container for the entire samples section */
 .sample-card {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Use align-items instead of place-items for flex column */
+  align-items: center;
   text-align: center;
   padding: 20px;
 }
 
 /* The gallery container for the images */
 .sample-gallery {
-  display: grid; /* Use Grid for your gallery layout */
-  /* This will create columns that are at least 250px wide, and as many as can fit */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px; /* A consistent pixel gap between grid items */
-  justify-items: center; /* Center items within their grid cells */
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px; /* Optional: limit overall gallery width */
-  margin: 0 auto; /* Center the gallery on the page */
+  display: grid;
+
+  /* Define 2 rows. '1fr' ensures they share space available within max-height. */
+  grid-template-rows: repeat(2, 1fr);
+  
+  /* This sets the actual height of each row implicitly created by grid-auto-flow. */
+  grid-auto-rows: 350px; /* Each row will effectively be 350px tall */
+  
+  /* Make items flow into columns first. When 2 rows are filled, new columns are created. */
+  grid-auto-flow: column;
+  
+  /* Defines the width of columns that are created automatically.
+     minmax(300px, 1fr) ensures columns are at least 300px wide. */
+  grid-auto-columns: minmax(300px, 1fr); 
+
+  gap: 30px; /* Consistent pixel gap between grid items */
+  padding: 20px; /* Padding inside the scrollable area */
+  width: 100%; /* Take full width of parent */
+  max-width: 100vw; /* Ensure it doesn't spill past viewport width */
+  margin: 0 auto; /* Center the gallery */
+
+  /* *Crucial for limiting vertical size and forcing horizontal scroll:* */
+  /* Calculate max-height: (2 rows * 350px/row) + (1 * 30px gap) + (2 * 20px padding) = 700px + 30px + 40px = 770px
+     Adjust padding as needed or combine into total height if more precise.
+     Let's simplify for now to focus on image and gap height. */
+  max-height: calc(2 * 350px + 30px + 40px); /* 2 rows height + 1 gap + top/bottom padding */
+
+
+  /* Enable horizontal scrolling if content overflows */
+  overflow-x: auto;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+
+  /* Optional: Hide scrollbar for a cleaner look (vendor prefixes for cross-browser) */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.sample-gallery::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* Individual sample item containers */
 .sample {
-    /* Ensure no extra padding/margin here that would add to the gap */
     margin: 0;
     padding: 0;
-    /* If you want uniform sizing for your sample divs, you might add: */
-    width: 100%; /* Make them fill their grid cell */
-    max-width: 400px; /* Limit their individual size */
 }
 
 
 /* Styles for the images inside the gallery */
 .sample-gallery img {
   width: 100%; /* Image fills its parent .sample div */
-  height: 350px; /* Set a fixed height for consistency */
+  height: 100%; /* Image fills the height of its parent grid cell (which is 350px tall) */
   border-radius: 8px;
-  object-fit: cover; /* Important: Crops the image to fit without distortion */
+  object-fit: cover; /* Crops the image to fit without distortion */
   transition: transform 0.3s ease;
+  display: block; /* Ensures images behave predictably within grid cells */
 }
 
 .sample-gallery img:hover {
@@ -294,12 +323,6 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
-
-  /* The sample-gallery already has a global gap of 30px.
-     If you want a different gap for smaller screens, uncomment and adjust: */
-  /* .sample-gallery{
-    gap: 20px;
-  } */
   
   .logo {
     width: 140px;
@@ -319,8 +342,20 @@ footer {
     width: 90%;
   }
 
-  /* Adjust image height for smaller screens if needed */
+  /* Adjust grid for smaller screens: a single row, smaller items */
+  .sample-gallery {
+    grid-template-rows: 1fr; /* Single row for mobile scroll */
+    grid-auto-rows: 250px; /* Mobile row height */
+    grid-auto-columns: minmax(200px, 1fr); /* Smaller min column width for mobile */
+    gap: 20px; /* Smaller gap on mobile */
+
+    /* Max height for single row on mobile */
+    max-height: calc(1 * 250px + 2 * 20px); /* 1 row height + top/bottom padding */
+    /* If you also have a gap inside the single row if items wrap, you'd account for it.
+       But with grid-auto-flow: column, they won't wrap to a second row here. */
+  }
+
   .sample-gallery img {
-    height: 250px; /* Smaller height for mobile */
+    height: 100%; /* Image fills its parent grid cell (which is 250px tall) */
   }
 }
